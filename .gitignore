@@ -28,3 +28,4 @@ dist-ssr
 /build
 *.js
 *.d.ts
+tsconfig.tsbuildinfo
