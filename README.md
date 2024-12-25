@@ -20,6 +20,7 @@ The project's source code can be found at the following GitHub repository:
 - **Error handling**: Displays an error message if the login fails.
 - **Loading state**: Shows a loading indicator while the login request is being processed.
 - **Redirect on login**: Redirects users to a protected page after successful login, and prevents logged-in users from accessing the login page again.
+- **Backend GraphQL endpoint**: https://fakeapi.platzi.com/
 
 ## Prerequisites
 
