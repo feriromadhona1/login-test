@@ -7,18 +7,26 @@
     "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "test": "vitest",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "@types/jest": "^29.5.14",
     "gh-pages": "^6.2.0",
+    "glob": "^9.3.5",
     "jwt-decode": "^4.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.26.0",
     "@eslint/js": "^9.17.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
     "@types/jwt-decode": "^2.2.1",
     "@types/node": "^22.10.2",
     "@types/react": "^18.3.18",
@@ -30,11 +38,14 @@
     "eslint-plugin-react-refresh": "^0.4.16",
     "gh-pages": "^6.2.0",
     "globals": "^15.14.0",
+    "jsdom": "^25.0.1",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
+    "ts-node": "^10.9.2",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "vitest": "^2.1.8"
   },
   "homepage": "https://feriromadhona1.github.io/login-test"
 }

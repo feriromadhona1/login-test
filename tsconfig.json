@@ -1,5 +1,4 @@
 {
-  "files": [],
   "compilerOptions": {
     "composite": true,
     "target": "ESNext",
@@ -13,9 +12,13 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true
   },
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+  "include": [
+    "src/**/*",
+    "App.tsx"
   ],
-  "include": ["src", "App.tsx"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist"
+  ]
 }

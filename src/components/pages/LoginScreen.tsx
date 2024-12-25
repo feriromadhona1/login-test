@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import LoginFormWrapper from '../organisms/LoginFormWrapper';
 import { login } from '../../services/authService'; // Import from authServices.ts
 import { useNavigate } from 'react-router-dom'; // For navigating to other pages
@@ -10,6 +10,13 @@ const LoginScreen: React.FC = () => {
   const [loading, setLoading] = useState(false);          // To handle loading state
   const navigate = useNavigate(); // Hook for navigation
 
+  useEffect(() => {
+    // Cek jika sudah login, jika iya arahkan ke dashboard
+    const isAuthenticated = localStorage.getItem('access_token');
+    if (isAuthenticated) {
+      navigate('/account'); // Arahkan ke halaman dashboard jika sudah login
+    }
+  }, [navigate]);
   const handleLogin = async () => {
     setError(null); // Reset error before trying login
     setLoading(true); // Start loading
