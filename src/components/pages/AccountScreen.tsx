@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getUserDetails } from '../../services/authService'; 
 import UserDetails from '../molecules/UserDetails';
-import Button from '../atoms/Button'; 
 
 const AccountScreen: React.FC = () => {
   const [user, setUser] = useState<{ name: string; avatar: string } | null>(null);

@@ -1,10 +1,7 @@
 {
   "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
   "compilerOptions": {
+    "composite": true,
     "target": "ESNext",
     "lib": ["dom", "esnext"],
     "allowJs": true,
@@ -16,5 +13,9 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src", "App.tsx"]
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "include": ["src", "App.tsx"],
 }

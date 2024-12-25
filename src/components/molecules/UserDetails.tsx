@@ -1,6 +1,5 @@
 // src/components/molecules/UserDetails.tsx
 import React, { useState } from 'react';
-import Button from '../atoms/Button';
 
 interface UserDetailsProps {
   name: string;

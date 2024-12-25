@@ -7,14 +7,17 @@ const LoginScreen: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null); // To handle errors
+  const [loading, setLoading] = useState(false);          // To handle loading state
   const navigate = useNavigate(); // Hook for navigation
 
   const handleLogin = async () => {
     setError(null); // Reset error before trying login
+    setLoading(true); // Start loading
 
     // Check if both email and password are filled
     if (!email || !password) {
       setError('Please enter both email and password');
+      setLoading(false); // Stop loading
       return;
     }
 
@@ -28,11 +31,11 @@ const LoginScreen: React.FC = () => {
       localStorage.setItem('refresh_token', refresh_token);
 
       // Redirect to Account screen
-
-
       navigate('/account');
     } catch (error: any) {
       setError(error.message || 'An error occurred during login'); // Set error if login fails
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
@@ -48,6 +51,8 @@ const LoginScreen: React.FC = () => {
           setEmail={setEmail}
           setPassword={setPassword}
           handleLogin={handleLogin}
+          error={error}          
+          loading={loading}
         />
     </div>
   );
