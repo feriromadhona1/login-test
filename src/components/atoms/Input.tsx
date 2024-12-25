@@ -1,12 +1,14 @@
 import React from 'react';
 
-interface InputProps {
-  label: string;
+export interface InputProps {
+  label?: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   type: string;
   disabled?: boolean;
+  placeholder?: string;
 }
+  
 
 const Input: React.FC<InputProps> = ({ label, value, onChange, type, disabled = false }) => {
   return (

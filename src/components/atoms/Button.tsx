@@ -1,4 +1,3 @@
-// src/components/atoms/Button.tsx
 import React from 'react';
 
 interface ButtonProps {
@@ -6,6 +5,7 @@ interface ButtonProps {
   onClick: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
+  className?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({ label, onClick, type = 'button', disabled = false }) => {
